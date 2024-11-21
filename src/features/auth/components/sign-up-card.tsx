@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { signIn } from "next-auth/react";
 import { FaGithub } from "react-icons/fa";
-import { FcGoogle } from "react-icons/fc";
+// import { FcGoogle } from "react-icons/fc";
 import { TriangleAlert } from "lucide-react";
 
 import { useSignUp } from "@/features/auth/hooks/use-sign-up";
@@ -35,7 +35,7 @@ export const SignUpCard = () => {
     e: React.FormEvent<HTMLFormElement>
   ) => {
     e.preventDefault();
-    
+
     mutation.mutate({
       name,
       email,
@@ -95,10 +95,10 @@ export const SignUpCard = () => {
             minLength={3}
             maxLength={20}
           />
-          <Button 
-            disabled={mutation.isPending} 
-            type="submit" 
-            className="w-full" 
+          <Button
+            disabled={mutation.isPending}
+            type="submit"
+            className="w-full"
             size="lg"
           >
             Continue
@@ -106,7 +106,7 @@ export const SignUpCard = () => {
         </form>
         <Separator />
         <div className="flex flex-col gap-y-2.5">
-          <Button
+          {/* <Button
             disabled={mutation.isPending}
             onClick={() => onProviderSignUp("google")}
             variant="outline"
@@ -115,7 +115,7 @@ export const SignUpCard = () => {
           >
             <FcGoogle className="mr-2 size-5 top-2.5 left-2.5 absolute" />
             Continue with Google
-          </Button>
+          </Button> */}
           <Button
             disabled={mutation.isPending}
             onClick={() => onProviderSignUp("github")}

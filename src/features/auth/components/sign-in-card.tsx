@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { signIn } from "next-auth/react";
 import { FaGithub } from "react-icons/fa";
-import { FcGoogle } from "react-icons/fc";
+// import { FcGoogle } from "react-icons/fc";
 import { TriangleAlert } from "lucide-react";
 import { useSearchParams } from "next/navigation";
 
@@ -81,7 +81,7 @@ export const SignInCard = () => {
         </form>
         <Separator />
         <div className="flex flex-col gap-y-2.5">
-          <Button
+          {/* <Button
             onClick={() => onProviderSignIn("google")}
             variant="outline"
             size="lg"
@@ -89,7 +89,7 @@ export const SignInCard = () => {
           >
             <FcGoogle className="mr-2 size-5 top-2.5 left-2.5 absolute" />
             Continue with Google
-          </Button>
+          </Button> */}
           <Button
             onClick={() => onProviderSignIn("github")}
             variant="outline"
